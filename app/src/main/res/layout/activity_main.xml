@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.garyhu.svgdemo.view.LoveHeartLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/love_layout"
+    tools:context="com.garyhu.svgdemo.activity.MainActivity"
+    android:orientation="vertical">
+
+    <com.garyhu.svgdemo.view.MyView
+        android:id="@+id/my_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <com.garyhu.svgdemo.view.MyProgress
+        android:id="@+id/progress"
+        android:layout_toRightOf="@id/my_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:cd_retreat_type="forward"
+        app:cd_arc_width="6dp"
+        app:cd_animator_time_unit="s"
+        app:cd_animator_time="3000"
+        app:cd_arc_color="#2C7C05"
+        app:cd_bg_color="#E59317"/>
+    <Button
+        android:id="@+id/btn"
+        android:layout_toRightOf="@id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD"/>
+    <Button
+        android:id="@+id/next"
+        android:layout_toRightOf="@id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEXT"/>
+    <com.garyhu.svgdemo.view.MessageBubbleView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</com.garyhu.svgdemo.view.LoveHeartLayout>
