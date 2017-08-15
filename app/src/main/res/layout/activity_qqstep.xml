@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.garyhu.svgdemo.activity.QQStepActivity">
+    <Button
+        android:id="@+id/btn"
+        android:text="设置步数"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.garyhu.svgdemo.view.QQStepView
+        android:id="@+id/qq_step"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        app:borderWidth="6dp"
+        app:innerColor="#AA6A0F"
+        app:stepTextColor="#12DBD8"
+        app:stepTextSize="12sp"
+        app:outerColor="#B20FC9"/>
+
+</RelativeLayout>

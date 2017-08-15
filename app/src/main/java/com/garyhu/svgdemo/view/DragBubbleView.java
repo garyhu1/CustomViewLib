@@ -219,7 +219,12 @@ public class DragBubbleView extends View {
         }
         //画消息个数的文本
         if (mState != STATE_DISMISS && !TextUtils.isEmpty(mText)) {
+            //设置文字的边框,通过边框来获取文字的宽高
             mTextPaint.getTextBounds(mText, 0, mText.length(), mTextRect);
+            //也可以换个方式获取文字的宽度和高度
+            float textWidth = mTextPaint.measureText(mText,0,mText.length());
+            Paint.FontMetrics fontMetrics = mTextPaint.getFontMetrics();
+            float textHeight = fontMetrics.bottom-fontMetrics.top;
             canvas.drawText(mText, mBubbleCenterX - mTextRect.width() / 2, mBubbleCenterY + mTextRect.height() / 2, mTextPaint);
         }
 
@@ -237,7 +242,7 @@ public class DragBubbleView extends View {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 if (mState != STATE_DISMISS) {
-                    getParent().requestDisallowInterceptTouchEvent(true);
+                    getParent().requestDisallowInterceptTouchEvent(true);//取消父容器对事件的拦截
                     d = (float) Math.hypot(event.getX() - mBubbleCenterX, event.getY() - mBubbleCenterY);
                     if (d < mBubbleRadius + maxD / 4) {
                         //当指尖坐标在圆内的时候，才认为是可拖拽的

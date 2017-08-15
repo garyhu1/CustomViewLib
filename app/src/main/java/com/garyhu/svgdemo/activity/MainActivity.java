@@ -40,5 +40,24 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,StickActivity.class));
             }
         });
+
+        findViewById(R.id.qq_step).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,QQStepActivity.class));
+            }
+        });
+        findViewById(R.id.my_view_pager).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,ViewPagerActivity.class));
+            }
+        });
+        findViewById(R.id.mul_view_pager).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,MulViewPagerActivity.class));
+            }
+        });
     }
 }

@@ -38,6 +38,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NEXT"/>
+    <Button
+        android:id="@+id/qq_step"
+        android:layout_below="@id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="qq计步器"/>
+    <Button
+        android:id="@+id/my_view_pager"
+        android:layout_below="@id/btn"
+        android:layout_toRightOf="@id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="viewpager动画"/>
+    <Button
+        android:id="@+id/mul_view_pager"
+        android:layout_below="@id/qq_step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:text="多条目的ViewPager"/>
     <com.garyhu.svgdemo.view.MessageBubbleView
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
