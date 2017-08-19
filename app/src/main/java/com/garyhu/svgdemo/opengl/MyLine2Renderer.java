@@ -14,21 +14,24 @@ import javax.microedition.khronos.opengles.GL10;
 
 /**
  * 作者： garyhu.
- * 时间： 2017/8/18.
+ * 时间： 2017/8/19.
  */
 
-public class MyLineRenderer implements GLSurfaceView.Renderer {
+public class MyLine2Renderer implements GLSurfaceView.Renderer {
+
+    private float yRotate = 0f;
+
     @Override
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {
-        gl.glClearColor(0,0,0,1f);
+        gl.glClearColor(0f,0f,0f,1f);
         gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);
     }
 
     @Override
     public void onSurfaceChanged(GL10 gl, int width, int height) {
         gl.glViewport(0,0,width,height);
-        float ratio = (float)width/(float)height;
         gl.glMatrixMode(GL10.GL_PROJECTION);
+        float ratio = (float)width/(float)height;
         gl.glLoadIdentity();
         gl.glFrustumf(ratio,-ratio,-1f,1f,3,7);
     }
@@ -38,31 +41,24 @@ public class MyLineRenderer implements GLSurfaceView.Renderer {
         gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
         gl.glMatrixMode(GL10.GL_MODELVIEW);
         gl.glLoadIdentity();
-        GLU.gluLookAt(gl,0,0,5,0,0,0,0,1,0);
-        gl.glColor4f(1f,1f,1f,1f);
+        GLU.gluLookAt(gl,0f,0f,5f,0f,0f,0f,0f,1f,0f);
+        gl.glColor4f(1f,0,0,1f);
+        gl.glRotatef(-90,1,0,0);
+        gl.glRotatef(yRotate,0f,1f,0);
+
         //画点
-        /**
-         * 计算点的坐标
-         * @param r 半径
-         * @param coordsList 坐标集合
-         * @param x,y,z 每个点的坐标
-         * @param alpha 角度
-         *
-         */
-
+        List<Float> coordsList = new ArrayList<Float>(); //用list存放各个点
         float r = 0.5f;//半径
-        float x = 0f,y = 0f,z = 0f;//点的坐标
-        List<Float> coordsList = new ArrayList<Float>();
-
-        //循环绘制点
-        for( float alpha = 0f; alpha < Math.PI * 6;alpha = (float) (alpha+Math.PI / 16 )){
+        float x = 0f,y = 0f,z = 1.5f;//点的坐标
+        float zStep = 0.005f;//z轴的步长
+        float lsize = 1.0f;
+        float lStep = 0.5f;
+        //用for循环出各个点的坐标
+        for( float alpha = 0f; alpha < Math.PI * 12;alpha = (float) (alpha+Math.PI / 32 )){
             x = (float) (Math.cos(alpha) * r);
             y = (float) (Math.sin(alpha) * r);
-            //添加原点
-            coordsList.add(0f);
-            coordsList.add(0f);
-            coordsList.add(0f);
-            //添加当前点
+            z = z - zStep;
+            gl.glLineWidth( lsize = lStep+lsize );
             coordsList.add(x);
             coordsList.add(y);
             coordsList.add(z);
@@ -75,7 +71,9 @@ public class MyLineRenderer implements GLSurfaceView.Renderer {
             fb.put(f);
         }
         bb.position(0);
-        gl.glVertexPointer(3, GL10.GL_FLOAT, 0, bb);
-        gl.glDrawArrays( GL10.GL_LINES,0,coordsList.size() / 3 );
+        gl.glVertexPointer(3,GL10.GL_FLOAT,0,bb);
+
+        gl.glDrawArrays(GL10.GL_LINE_STRIP,0,coordsList.size()/3);
+
     }
 }

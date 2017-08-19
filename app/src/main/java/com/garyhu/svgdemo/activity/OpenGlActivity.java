@@ -6,9 +6,11 @@ import android.util.Log;
 
 import com.garyhu.svgdemo.R;
 import com.garyhu.svgdemo.opengl.MyGLSurfaceView;
+import com.garyhu.svgdemo.opengl.MyLine2Renderer;
 import com.garyhu.svgdemo.opengl.MyLineRenderer;
 import com.garyhu.svgdemo.opengl.MyLinesRenderer;
 import com.garyhu.svgdemo.opengl.MyPointRenderer;
+import com.garyhu.svgdemo.opengl.MyRectFRenderer;
 import com.garyhu.svgdemo.opengl.MyRender;
 
 public class OpenGlActivity extends AppCompatActivity {
@@ -23,7 +25,9 @@ public class OpenGlActivity extends AppCompatActivity {
 //        gl.setRenderer(new MyRender());
 //        gl.setRenderer(new MyPointRenderer());
 //        gl.setRenderer(new MyLinesRenderer());
-        gl.setRenderer(new MyLineRenderer());
+//        gl.setRenderer(new MyLineRenderer());
+//        gl.setRenderer(new MyLine2Renderer());
+        gl.setRenderer(new MyRectFRenderer());
 //        Log.d("garyhu","Math.PI = "+Math.PI);
     }
 }
