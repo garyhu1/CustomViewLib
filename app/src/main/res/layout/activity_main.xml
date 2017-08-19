@@ -58,6 +58,14 @@
         android:layout_height="wrap_content"
         android:textSize="10sp"
         android:text="多条目的ViewPager"/>
+    <Button
+        android:id="@+id/open_gl"
+        android:layout_below="@id/qq_step"
+        android:layout_toRightOf="@id/mul_view_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:text="OpenGl"/>
     <com.garyhu.svgdemo.view.MessageBubbleView
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

@@ -19,7 +19,8 @@
         <activity android:name=".activity.StickActivity" />
         <activity android:name=".activity.QQStepActivity" />
         <activity android:name=".activity.ViewPagerActivity" />
-        <activity android:name=".activity.MulViewPagerActivity"></activity>
+        <activity android:name=".activity.MulViewPagerActivity" />
+        <activity android:name=".activity.OpenGlActivity"></activity>
     </application>
 
 </manifest>

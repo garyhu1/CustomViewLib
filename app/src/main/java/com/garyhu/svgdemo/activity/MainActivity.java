@@ -53,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,ViewPagerActivity.class));
             }
         });
-        findViewById(R.id.mul_view_pager).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.open_gl).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,MulViewPagerActivity.class));
+                startActivity(new Intent(MainActivity.this,OpenGlActivity.class));
             }
         });
     }
