@@ -5,9 +5,11 @@ import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.hardware.Camera;
+import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -71,6 +73,7 @@ public class FlashActivity extends AppCompatActivity implements View.OnClickList
         FlashActivityPermissionsDispatcher.startFlashWithCheck(this);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @NeedsPermission(Manifest.permission.CAMERA)
     public void startFlash() {
         DisplayMetrics metrics = getResources().getDisplayMetrics();
@@ -144,6 +147,7 @@ public class FlashActivity extends AppCompatActivity implements View.OnClickList
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onClick(View v) {
         // Auto-generated method stub
@@ -151,6 +155,7 @@ public class FlashActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     private void judge(View v) {
         if (!(v instanceof ImageButton))
             return;
@@ -267,7 +272,9 @@ public class FlashActivity extends AppCompatActivity implements View.OnClickList
 
     private void turnOffFlashLight() {
         parameters.setFlashMode(Camera.Parameters.FLASH_MODE_OFF);
-        camera.setParameters(parameters);
-        camera.stopPreview();
+        if(camera!=null){
+            camera.setParameters(parameters);
+            camera.stopPreview();
+        }
     }
 }
