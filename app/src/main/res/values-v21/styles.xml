@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="transitionName">
+        <item name="android:transitionName">@string/transition_view</item>
+    </style>
+</resources>

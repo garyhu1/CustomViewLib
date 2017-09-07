@@ -25,6 +25,7 @@ import com.garyhu.svgdemo.utils.DensityUtils;
 
 /**
  * 仿qq消息气泡
+ *  有BUG存在
  */
 public class DragBubbleView extends View {
 

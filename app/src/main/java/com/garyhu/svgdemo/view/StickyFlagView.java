@@ -37,6 +37,7 @@ import java.util.List;
 /**
  * 有粘性的标记view
  * Created by garyhu on 17/8/14.
+ * 仿扣扣的拖拽松开消失的标记VIew
  */
 public class StickyFlagView extends View {
 

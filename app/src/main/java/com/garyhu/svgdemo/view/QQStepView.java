@@ -20,6 +20,7 @@ import com.garyhu.svgdemo.utils.DensityUtils;
 /**
  * 作者： garyhu.
  * 时间： 2017/8/14.
+ * 仿QQ计步器
  */
 
 public class QQStepView extends View {

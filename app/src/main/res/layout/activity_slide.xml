@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.garyhu.svgdemo.activity.SlideActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/s_3"
+        android:scaleType="fitXY"/>
+    <com.garyhu.svgdemo.view.slidinglayout.SlidingLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:sliding_mode="top"
+        app:top_max="200dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimary"/>
+        </RelativeLayout>
+    </com.garyhu.svgdemo.view.slidinglayout.SlidingLayout>
+</RelativeLayout>

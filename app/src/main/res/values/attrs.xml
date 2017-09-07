@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--自定义进度条属性-->
     <declare-styleable name="MyProgress">
         <!--view半径-->
         <attr name="cd_circle_radius" format="dimension" />
@@ -32,6 +33,7 @@
             <enum name="bottom" value="4" />
         </attr>
     </declare-styleable>
+    <!--可以拖拽的气泡-->
     <declare-styleable name="StickyFlagView">
         <attr name="flagColor" format="color"/>
         <attr name="flagTextColor" format="color"/>
@@ -42,6 +44,7 @@
         <attr name="minStickRadius" format="dimension"/>
         <attr name="maxDistance" format="dimension" />
     </declare-styleable>
+    <!--可以拖拽的气泡-->
     <declare-styleable name="DragBubbleView">
         <attr name="bubbleRadius" format="dimension" />
         <attr name="bubbleColor" format="color" />
@@ -49,6 +52,7 @@
         <attr name="textSize" format="dimension" />
         <attr name="textColor" format="color" />
     </declare-styleable>
+    <!--仿QQ计步器属性-->
     <declare-styleable name="QQStepView">
         <attr name="outerColor" format="color"/>
         <attr name="innerColor" format="color"/>
@@ -56,4 +60,49 @@
         <attr name="stepTextSize" format="dimension"/>
         <attr name="stepTextColor" format="color"/>
     </declare-styleable>
+    <!--方块移动的加载进度-->
+    <declare-styleable name="Kawaii_LoadingView">
+        <attr name="half_BlockWidth" format="dimension" />
+        <attr name="blockInterval" format="dimension" />
+        <attr name="initPosition" format="integer" />
+        <attr name="isClock_Wise" format="boolean" />
+        <attr name="lineNumber" format="integer"  />
+        <attr name="moveSpeed" format="integer"  />
+        <attr name="blockColor" format="color"  />
+        <attr name="moveBlock_Angle" format="float"  />
+        <attr name="fixBlock_Angle" format="float"  />
+        <attr name="move_Interpolator" format="reference"  />
+    </declare-styleable>
+    <!--SlidingLayout 的自定义属性-->
+    <declare-styleable name="SlidingLayout">
+        <attr name="background_view" format="reference"/>
+        <attr name="sliding_mode" format="enum">
+            <enum name="both" value="0"/>
+            <enum name="top" value="1"/>
+            <enum name="bottom" value="2"/></attr>
+        <attr name="sliding_pointer_mode" format="enum">
+            <enum name="one" value="0"/>
+            <enum name="more" value="1"/></attr>
+        <attr name="top_max" format="dimension"/>
+    </declare-styleable>
+    <!-- Map文本效果 -->
+    <declare-styleable name="MapTextView">
+        <attr name="keyText" format="string"/>
+        <attr name="valueText" format="string"/>
+        <attr name="keyTextColor" format="color"/>
+        <attr name="valueTextColor" format="color"/>
+        <attr name="keyBackgroundColor" format="color"/>
+        <attr name="circleColor" format="color"/>
+        <attr name="keyText_size" format="dimension"/>
+        <attr name="valueText_size" format="dimension"/>
+        <attr name="isUniformColor" format="boolean"/>
+    </declare-styleable>
+    <!-- 圆形图片 -->
+    <declare-styleable name="CircleImageView">
+        <attr format="dimension" name="civ_border_width"/>
+        <attr format="color" name="civ_border_color"/>
+        <attr format="boolean" name="civ_border_overlay"/>
+        <attr format="color" name="civ_fill_color"/>
+    </declare-styleable>
+
 </resources>

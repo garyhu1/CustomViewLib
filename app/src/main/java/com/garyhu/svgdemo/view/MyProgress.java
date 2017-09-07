@@ -80,6 +80,7 @@ public class MyProgress extends View {
         mPaintArc.setAntiAlias(true);
         mPaintArc.setStyle(Paint.Style.STROKE);
         mPaintArc.setColor(mArcColor);
+        mPaintArc.setStrokeCap(Paint.Cap.ROUND);
         mPaintArc.setStrokeWidth(mArcWidth);
 
         mPaintBg = new Paint();

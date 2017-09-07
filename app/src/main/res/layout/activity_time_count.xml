@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.garyhu.svgdemo.activity.TimeCountActivity">
+
+    <com.garyhu.svgdemo.view.MyProgress
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        app:cd_retreat_type="forward"
+        app:cd_arc_width="6dp"
+        app:cd_animator_time_unit="s"
+        app:cd_animator_time="3000"
+        app:cd_arc_color="#2C7C05"
+        app:cd_bg_color="#E59317"/>
+
+</RelativeLayout>
