@@ -138,6 +138,14 @@
             android:background="@drawable/btn_bg"
             android:textColor="#fff"
             android:text="打开手电筒"/>
+        <Button
+            android:id="@+id/color_picker"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_bg"
+            android:textColor="#fff"
+            android:text="颜色选择器"/>
     </LinearLayout>
 
 </ScrollView>

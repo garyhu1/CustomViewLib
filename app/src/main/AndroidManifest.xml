@@ -3,15 +3,15 @@
     package="com.garyhu.svgdemo">
 
     <!-- 需要动态申请的权限 -->
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <!-- 后台自动授予的权限 -->
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -42,7 +42,9 @@
         <activity android:name=".activity.SlideActivity" />
         <activity android:name=".activity.MapTextActivity" />
         <activity android:name=".activity.FlashActivity" />
-        <activity android:name=".activity.CircleImgActivity"></activity>
+        <activity android:name=".activity.CircleImgActivity" />
+        <activity android:name=".view.colorpicker.ColorSelectActivity" />
+        <activity android:name=".activity.ColorPickerActivity"></activity>
     </application>
 
 </manifest>
