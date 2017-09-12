@@ -146,6 +146,14 @@
             android:background="@drawable/btn_bg"
             android:textColor="#fff"
             android:text="颜色选择器"/>
+        <Button
+            android:id="@+id/path_anim"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_bg"
+            android:textColor="#fff"
+            android:text="路径动画效果演示"/>
     </LinearLayout>
 
 </ScrollView>

@@ -44,7 +44,8 @@
         <activity android:name=".activity.FlashActivity" />
         <activity android:name=".activity.CircleImgActivity" />
         <activity android:name=".view.colorpicker.ColorSelectActivity" />
-        <activity android:name=".activity.ColorPickerActivity"></activity>
+        <activity android:name=".activity.ColorPickerActivity" />
+        <activity android:name=".activity.PathAnimActivity"></activity>
     </application>
 
 </manifest>

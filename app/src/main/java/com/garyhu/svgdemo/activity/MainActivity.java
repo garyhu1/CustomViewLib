@@ -119,5 +119,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,ColorPickerActivity.class));
             }
         });
+        findViewById(R.id.path_anim).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,PathAnimActivity.class));
+            }
+        });
     }
 }
