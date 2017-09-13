@@ -154,6 +154,14 @@
             android:background="@drawable/btn_bg"
             android:textColor="#fff"
             android:text="路径动画效果演示"/>
+        <Button
+            android:id="@+id/show_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_bg"
+            android:textColor="#fff"
+            android:text="显示对话框"/>
     </LinearLayout>
 
 </ScrollView>

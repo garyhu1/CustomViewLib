@@ -8,11 +8,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.garyhu.svgdemo.view.CusDialog;
 import com.garyhu.svgdemo.view.LoveHeartLayout;
 import com.garyhu.svgdemo.view.MyProgress;
 import com.garyhu.svgdemo.R;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,6 +126,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,PathAnimActivity.class));
+            }
+        });
+        findViewById(R.id.show_dialog).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CusDialog dialog = new CusDialog();
+
+                dialog.show(getFragmentManager(),TAG);
             }
         });
     }
