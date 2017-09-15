@@ -6,11 +6,8 @@ import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import com.garyhu.svgdemo.view.CusDialog;
-import com.garyhu.svgdemo.view.LoveHeartLayout;
-import com.garyhu.svgdemo.view.MyProgress;
 import com.garyhu.svgdemo.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -136,5 +133,31 @@ public class MainActivity extends AppCompatActivity {
                 dialog.show(getFragmentManager(),TAG);
             }
         });
+
+        findViewById(R.id.battery).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,BatteryActivity.class));
+            }
+        });
+        findViewById(R.id.screen).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,ScreenActivity.class));
+            }
+        });
+        findViewById(R.id.read_file).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,ReadFileActivity.class));
+            }
+        });
+        findViewById(R.id.share).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,ShareActivity.class));
+            }
+        });
     }
+
 }

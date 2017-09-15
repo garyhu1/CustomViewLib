@@ -162,6 +162,39 @@
             android:background="@drawable/btn_bg"
             android:textColor="#fff"
             android:text="显示对话框"/>
+        <Button
+            android:id="@+id/battery"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_bg"
+            android:textColor="#fff"
+            android:text="电池管理界面"/>
+
+        <Button
+            android:id="@+id/screen"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_bg"
+            android:textColor="#fff"
+            android:text="屏幕开启关闭的监听"/>
+        <Button
+            android:id="@+id/read_file"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_bg"
+            android:textColor="#fff"
+            android:text="读取项目中的文件"/>
+        <Button
+            android:id="@+id/share"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_bg"
+            android:textColor="#fff"
+            android:text="分享功能展示"/>
     </LinearLayout>
 
 </ScrollView>
