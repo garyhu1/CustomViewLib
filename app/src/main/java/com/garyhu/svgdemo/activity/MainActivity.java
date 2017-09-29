@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.garyhu.svgdemo.view.CusDialog;
 import com.garyhu.svgdemo.R;
+import com.garyhu.svgdemo.view.SwitchMultiButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,67 +19,53 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViewById(R.id.add).setOnClickListener(new View.OnClickListener() {
+        ((SwitchMultiButton) findViewById(R.id.one_switch)).setText("点赞效果","气泡拖拽","计步器").setOnSwitchListener(new SwitchMultiButton.OnSwitchListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,LoveLayoutActivity.class));
+            public void onSwitch(int position, String tabText) {
+                if(position==0){
+                    startActivity(new Intent(MainActivity.this,LoveLayoutActivity.class));
+                }else if(position==1){
+                    startActivity(new Intent(MainActivity.this,StickActivity.class));
+                }else {
+                    startActivity(new Intent(MainActivity.this,QQStepActivity.class));
+                }
             }
         });
-        findViewById(R.id.next).setOnClickListener(new View.OnClickListener() {
+        ((SwitchMultiButton) findViewById(R.id.two_switch)).setText("ViewPager动画","OpenGL动画").setOnSwitchListener(new SwitchMultiButton.OnSwitchListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,StickActivity.class));
+            public void onSwitch(int position, String tabText) {
+                if(position==0){
+                    startActivity(new Intent(MainActivity.this,ViewPagerActivity.class));
+                }else {
+                    startActivity(new Intent(MainActivity.this,OpenGlActivity.class));
+                }
             }
         });
 
-        findViewById(R.id.qq_step).setOnClickListener(new View.OnClickListener() {
+        ((SwitchMultiButton) findViewById(R.id.three_switch)).setText("加载动画","倒计时动画","消息拖拽框").setOnSwitchListener(new SwitchMultiButton.OnSwitchListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,QQStepActivity.class));
+            public void onSwitch(int position, String tabText) {
+                if(position == 0){
+                    startActivity(new Intent(MainActivity.this,LoadingActivity.class));
+                }else if(position == 1){
+                    startActivity(new Intent(MainActivity.this,TimeCountActivity.class));
+                }else {
+                    startActivity(new Intent(MainActivity.this,MessageBubbleActivity.class));
+                }
             }
         });
-        findViewById(R.id.my_view_pager).setOnClickListener(new View.OnClickListener() {
+
+        ((SwitchMultiButton) findViewById(R.id.four_switch)).setText("水波纹动画","自定义图片缩放").setOnSwitchListener(new SwitchMultiButton.OnSwitchListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,ViewPagerActivity.class));
+            public void onSwitch(int position, String tabText) {
+                if(position == 0){
+                    startActivity(new Intent(MainActivity.this,WaveActivity.class));
+                }else {
+                    startActivity(new Intent(MainActivity.this,ZoomInOutActivity.class));
+                }
             }
         });
-        findViewById(R.id.open_gl).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,OpenGlActivity.class));
-            }
-        });
-        findViewById(R.id.load_anim).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,LoadingActivity.class));
-            }
-        });
-        findViewById(R.id.count_time).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,TimeCountActivity.class));
-            }
-        });
-        findViewById(R.id.msg_bubble).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,MessageBubbleActivity.class));
-            }
-        });
-        findViewById(R.id.wave).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,WaveActivity.class));
-            }
-        });
-        findViewById(R.id.zoom).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,ZoomInOutActivity.class));
-            }
-        });
+
         findViewById(R.id.transition).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,73 +76,69 @@ public class MainActivity extends AppCompatActivity {
                 ActivityCompat.startActivity(MainActivity.this,intent,options.toBundle());
             }
         });
-        findViewById(R.id.slide).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,SlideActivity.class));
-            }
-        });
-        findViewById(R.id.map_text).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,MapTextActivity.class));
-            }
-        });
-        findViewById(R.id.circle_img).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,CircleImgActivity.class));
-            }
-        });
-        findViewById(R.id.flash).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,FlashActivity.class));
-            }
-        });
-        findViewById(R.id.color_picker).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,ColorPickerActivity.class));
-            }
-        });
-        findViewById(R.id.path_anim).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,PathAnimActivity.class));
-            }
-        });
-        findViewById(R.id.show_dialog).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CusDialog dialog = new CusDialog();
 
-                dialog.show(getFragmentManager(),TAG);
+        ((SwitchMultiButton) findViewById(R.id.five_switch)).setText("果冻弹性布局","MapText的特殊文本效果").setOnSwitchListener(new SwitchMultiButton.OnSwitchListener() {
+            @Override
+            public void onSwitch(int position, String tabText) {
+                if(position == 0){
+                    startActivity(new Intent(MainActivity.this,SlideActivity.class));
+                }else {
+                    startActivity(new Intent(MainActivity.this,MapTextActivity.class));
+                }
             }
         });
 
-        findViewById(R.id.battery).setOnClickListener(new View.OnClickListener() {
+        ((SwitchMultiButton) findViewById(R.id.six_switch)).setText("圆形图片","手电筒","颜色选择器").setOnSwitchListener(new SwitchMultiButton.OnSwitchListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,BatteryActivity.class));
+            public void onSwitch(int position, String tabText) {
+                if(position == 0){
+                    startActivity(new Intent(MainActivity.this,CircleImgActivity.class));
+                }else if(position ==1){
+                    startActivity(new Intent(MainActivity.this,FlashActivity.class));
+                }else {
+                    startActivity(new Intent(MainActivity.this,ColorPickerActivity.class));
+                }
             }
         });
-        findViewById(R.id.screen).setOnClickListener(new View.OnClickListener() {
+
+        ((SwitchMultiButton) findViewById(R.id.seven_switch)).setText("路径动画","自定义dialog","电池管理").setOnSwitchListener(new SwitchMultiButton.OnSwitchListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,ScreenActivity.class));
+            public void onSwitch(int position, String tabText) {
+                if(position == 0){
+                    startActivity(new Intent(MainActivity.this,PathAnimActivity.class));
+                }else if(position ==1){
+                    CusDialog dialog = new CusDialog();
+
+                    dialog.show(getFragmentManager(),TAG);
+                }else {
+                    startActivity(new Intent(MainActivity.this,BatteryActivity.class));
+                }
             }
         });
-        findViewById(R.id.read_file).setOnClickListener(new View.OnClickListener() {
+
+        ((SwitchMultiButton) findViewById(R.id.eight_switch)).setText("监听锁屏","读取文件","分享界面").setOnSwitchListener(new SwitchMultiButton.OnSwitchListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,ReadFileActivity.class));
+            public void onSwitch(int position, String tabText) {
+                if(position == 0){
+                    startActivity(new Intent(MainActivity.this,ScreenActivity.class));
+                }else if(position ==1){
+                    startActivity(new Intent(MainActivity.this,ReadFileActivity.class));
+                }else {
+                    startActivity(new Intent(MainActivity.this,ShareActivity.class));
+                }
             }
         });
-        findViewById(R.id.share).setOnClickListener(new View.OnClickListener() {
+
+        ((SwitchMultiButton) findViewById(R.id.nine_switch)).setText("RecyclerView的item移出屏幕动画","暂无").setOnSwitchListener(new SwitchMultiButton.OnSwitchListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,ShareActivity.class));
+            public void onSwitch(int position, String tabText) {
+                if(position == 0){
+                    startActivity(new Intent(MainActivity.this,RecyclerItemAnimActivity.class));
+                }else if(position ==1){
+//                    startActivity(new Intent(MainActivity.this,ReadFileActivity.class));
+                }else {
+//                    startActivity(new Intent(MainActivity.this,ShareActivity.class));
+                }
             }
         });
     }

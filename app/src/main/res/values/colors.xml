@@ -9,4 +9,7 @@
     <color name="picker_normal">#00000000</color>
     <color name="picker_pressed">#03a9f4</color>
 
+    <color name="green">#17bb0b</color>
+    <color name="red">#e50b1f</color>
+
 </resources>

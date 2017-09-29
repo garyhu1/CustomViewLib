@@ -105,4 +105,14 @@
         <attr format="color" name="civ_fill_color"/>
     </declare-styleable>
 
+    <!--switchButton-->
+    <declare-styleable name="SwitchMultiButton">
+        <attr name="strokeRadius" format="dimension" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="tSize" format="dimension" />
+        <attr name="selectedTab" format="integer" />
+        <attr name="selectedColor" format="color|reference" />
+        <attr name="switchTabs" format="reference" />
+    </declare-styleable>
+
 </resources>

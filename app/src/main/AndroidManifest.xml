@@ -62,6 +62,7 @@
         <activity android:name=".activity.ScreenActivity" />
         <activity android:name=".activity.ReadFileActivity" />
         <activity android:name=".activity.ShareActivity"></activity>
+        <activity android:name=".activity.RecyclerItemAnimActivity"></activity>
 
         <activity
             android:name="com.mob.tools.MobUIShell"
