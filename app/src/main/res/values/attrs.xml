@@ -115,4 +115,13 @@
         <attr name="switchTabs" format="reference" />
     </declare-styleable>
 
+    <!--可以收放的TextView-->
+    <declare-styleable name="ExpandableTextView">
+        <attr name="maxCollapsedLines" format="integer"/>
+        <attr name="animDuration" format="integer"/>
+        <attr name="animAlphaStart" format="float"/>
+        <attr name="expandDrawable" format="reference"/>
+        <attr name="collapseDrawable" format="reference"/>
+    </declare-styleable>
+
 </resources>

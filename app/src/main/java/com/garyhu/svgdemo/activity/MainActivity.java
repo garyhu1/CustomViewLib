@@ -129,13 +129,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ((SwitchMultiButton) findViewById(R.id.nine_switch)).setText("RecyclerView的item移出屏幕动画","暂无").setOnSwitchListener(new SwitchMultiButton.OnSwitchListener() {
+        ((SwitchMultiButton) findViewById(R.id.nine_switch)).setText("RecyclerView的item移出屏幕动画","可收放的TextView").setOnSwitchListener(new SwitchMultiButton.OnSwitchListener() {
             @Override
             public void onSwitch(int position, String tabText) {
                 if(position == 0){
                     startActivity(new Intent(MainActivity.this,RecyclerItemAnimActivity.class));
                 }else if(position ==1){
-//                    startActivity(new Intent(MainActivity.this,ReadFileActivity.class));
+                    startActivity(new Intent(MainActivity.this,ExpandableTextActivity.class));
                 }else {
 //                    startActivity(new Intent(MainActivity.this,ShareActivity.class));
                 }

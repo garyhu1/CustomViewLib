@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">SVGDemo</string>
     <string name="share">分享</string>
+    <string name="expandable_text">
+        这是一个可以点击收起和展开的文本，该控件主要继承了LinearLayout,内部有两个控件，分别是TextView和ImageButton,
+        点击内部的任意一个控件都可以进行操作，具有收放动画，针对列表时，还可以记录不同位置的展开状态。可以通过设置控件的
+        属性来设置显示的行数和动画执行的时长。
+    </string>
 </resources>
